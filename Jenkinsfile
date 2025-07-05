@@ -10,7 +10,8 @@ pipeline {
   stages {
     stage('Clone Code') {
       steps {
-        git 'https://github.com/iamsumit24/git-k8s.git'
+        // ✅ Specify correct branch name "main"
+        git branch: 'main', url: 'https://github.com/iamsumit24/git-k8s.git'
       }
     }
 
